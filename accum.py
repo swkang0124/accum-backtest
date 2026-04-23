@@ -118,7 +118,7 @@ def simulate_rebalance(data, weights, monthly_cash):
 # 시뮬레이션 (DCA)
 # =========================
 def simulate_dca(data, weights, monthly_cash):
-    prices = data.resample("M").last()
+    prices = data.resample("ME").last()
     weights = np.array(weights)
 
     holdings = np.zeros(len(weights))
