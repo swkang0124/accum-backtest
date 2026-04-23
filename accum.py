@@ -87,7 +87,7 @@ def load_data(tickers, start, end):
 # 시뮬레이션 (리밸런싱)
 # =========================
 def simulate_rebalance(data, weights, monthly_cash):
-    prices = data.resample("M").last()
+    prices = data.resample("ME").last()
     weights = np.array(weights)
 
     holdings = np.zeros(len(weights))
